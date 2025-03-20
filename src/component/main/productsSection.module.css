@@ -1,0 +1,155 @@
+.section {
+  margin-bottom: 10rem;
+}
+
+.title {
+  display: flex;
+  gap: 1em;
+  align-items: center;
+  margin-bottom: 3rem;
+}
+
+.title .bar {
+  width: 4px;
+  height: 1.6rem;
+  border-radius: 2px;
+  background-color: var(--color-main);
+}
+
+.title .titleText {
+  font-size: 2.4rem;
+  font-weight: 500;
+}
+
+.showBtn {
+  font-size: 1.2rem;
+  color: var(--color-text-darkgray);
+  display: flex;
+  align-items: center;
+  padding: 0.3rem 0.5rem;
+  cursor: pointer;
+}
+
+.productsContainer {
+  position: relative;
+}
+
+.productsWrap {
+  overflow-x: scroll;
+}
+
+.productsWrap::-webkit-scrollbar {
+  display: none;
+}
+
+.productsSlider {
+  height: 100%;
+  display: flex;
+  gap: 1rem;
+}
+
+.productsGroup {
+  min-width: 100%;
+  height: 100%;
+  display: grid;
+  gap: 1rem;
+}
+
+.itemWrap {
+  min-width: 0;
+}
+
+.moreBtn {
+  padding: 3rem;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+}
+
+.moreBtnGrad {
+  width: 100%;
+  height: 100%;
+  border-radius: 1.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.moreBtn:hover .moreBtnGrad {
+  box-shadow: var(--light-shadow);
+}
+
+.moreBtn p {
+  padding: 0.5rem 0.2rem;
+  display: flex;
+  gap: 0.5rem;
+  border-bottom: 1px solid transparent;
+}
+
+.moreBtn:hover p {
+  border-bottom: 1px solid var(--color-text-gray);
+}
+
+.moreBtn span {
+  font-size: 1.4rem;
+  color: var(--color-text-darkgray);
+}
+
+.slideButtonLeft, 
+.slideButtonRight {
+  position: absolute;
+  top: 50%;
+  z-index: 1;
+  width: 4rem;
+  height: 4rem;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.9);
+  border: 1px solid var(--color-lightgray);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  opacity: 0;
+  transition: opacity 0.1s linear, background-color 0.2s linear, box-shadow 0.2s linear;
+}
+
+.slideButtonLeft {
+  left: 0;
+  transform: translate(-50%, -50%);
+}
+
+.slideButtonRight {
+  right: 0;
+  transform: translate(50%, -50%);
+}
+
+.productsContainer:hover .slideButtonLeft, 
+.productsContainer:hover .slideButtonRight {
+  opacity: 1;
+}
+
+.slideButtonLeft:hover, 
+.slideButtonRight:hover {
+  background-color: var(--color-white);
+  box-shadow: var(--drop-light-shadow);
+}
+
+.slideButtonLeft svg, 
+.slideButtonRight svg {
+  font-size: 1.6rem;
+  color: var(--color-text-black);
+}
+
+.noProducts {
+  font-size: 1.6rem;
+  color: var(--color-text-gray);
+  text-align: center;
+  border-top: 1px solid var(--color-border);
+  border-bottom: 1px solid var(--color-border);
+  background-color: var(--color-faintgray);
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10rem 0;
+}

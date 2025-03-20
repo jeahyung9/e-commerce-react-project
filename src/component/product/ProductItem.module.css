@@ -1,0 +1,108 @@
+.productContainer {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.imgWrap {
+  width: 100%;
+  aspect-ratio: 1;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.imgBox {
+  width: 100%;
+  height: 100%;
+}
+
+.img {
+  /* min-width: 100%;
+  min-height: 100%; */
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.2s ease-in-out;
+}
+
+.img:hover {
+  transform: scale(1.05);
+}
+
+.noImg {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--color-faintgray);
+  color: var(--color-text-gray);
+  font-size: 1.4rem;
+}
+
+.cartBtn {
+  position: absolute;
+  bottom: 4.4rem;
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 0;
+  transition: opacity 0.2s ease-in-out;
+  width: calc(100% - 2rem);
+}
+
+.productContainer:hover .cartBtn {
+  opacity: 1;
+}
+
+.productText {
+  padding: 1rem 0;
+}
+
+.pName {
+  font-size: 1.4rem;
+  margin-bottom: 0.5rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.pPrice {
+  font-size: 1.6rem;
+}
+
+.oPrice {
+  color: var(--color-text-gray);
+  text-decoration: line-through;
+  font-size: 1.4rem;
+  margin-bottom: 0.2rem;
+}
+
+.dPrice {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.discount {
+  color: var(--color-red);
+  font-weight: 500;
+}
+
+.final {
+  font-weight: 500;
+}
+
+.review {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+  color: var(--color-text-gray);
+  font-size: 1.2rem;
+}
+
+.reviewIcon {
+  font-size: 1.6rem;
+  color: var(--color-text-gray);
+}

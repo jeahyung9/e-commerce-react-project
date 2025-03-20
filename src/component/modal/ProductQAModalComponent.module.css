@@ -1,0 +1,75 @@
+.QAModalWrap {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modalContent {
+    background-color: var(--color-white);
+    width: 800px;
+    padding: 3rem;
+    border-radius: 8px;
+    position: relative;
+}
+
+.contentTop {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.contentTitle {
+    font-size: 23px;
+    font-weight: 500;
+}
+
+.modalClose {
+    font-size: 30px;
+    cursor: pointer;
+}
+
+.inputWrap {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    font-size: 1.4rem;
+    margin-bottom: 2rem;
+}
+
+.inputRow {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+}
+
+.inputLabel {
+    width: 10rem;
+    flex: none;
+}
+
+.modalButtonWrap {
+    display: flex;
+    gap: 1em;
+    justify-content: center;
+}
+
+.modalButtonWrap button {
+    padding: 1em 2em;
+    border: 1px solid var(--color-lightgray);
+}

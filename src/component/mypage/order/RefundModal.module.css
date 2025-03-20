@@ -1,0 +1,181 @@
+/* src/components/Payment/RefundModal.css */
+.modalOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.refundModal {
+  background-color: white;
+  width: 90%;
+  max-width: 500px;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  animation: modalSlideUp 0.3s ease-out;
+}
+
+.modalHeader {
+  padding: 20px;
+  border-bottom: 1px solid #eee;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.modalHeader h3 {
+  margin: 0;
+  font-size: 1.5rem;
+  color: #2c3e50;
+}
+
+.closeButton {
+  background: none;
+  border: none;
+  font-size: 24px;
+  color: #666;
+  cursor: pointer;
+  padding: 0;
+  line-height: 1;
+}
+
+.closeButton:hover {
+  color: #333;
+}
+
+.modalContent {
+  padding: 20px;
+}
+
+.orderSummary {
+  background-color: #f8f9fa;
+  padding: 15px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+.summaryItem {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.summaryItem:last-child {
+  margin-bottom: 0;
+}
+
+.summaryItem span {
+  color: #666;
+}
+
+.summaryItem strong {
+  color: #2c3e50;
+}
+
+.refundForm label {
+  display: block;
+  margin-bottom: 8px;
+  color: #2c3e50;
+  font-weight: 500;
+}
+
+.refundForm textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  resize: vertical;
+  min-height: 120px;
+  font-size: 14px;
+}
+
+.refundForm textarea:focus {
+  outline: none;
+  border-color: #3498db;
+  box-shadow: 0 0 0 2px rgba(52, 152, 219, 0.2);
+}
+
+.textLength {
+  text-align: right;
+  color: #666;
+  font-size: 12px;
+  margin-top: 4px;
+}
+
+.modalFooter {
+  padding: 20px;
+  border-top: 1px solid #eee;
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+}
+
+.cancelButton, .confirmButton {
+  padding: 10px 20px;
+  border-radius: 6px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.cancelButton {
+  background-color: #f1f2f6;
+  border: none;
+  color: #2c3e50;
+}
+
+.cancelButton:hover {
+  background-color: #dfe4ea;
+}
+
+.confirmButton {
+  background-color: #3498db;
+  border: none;
+  color: white;
+}
+
+.confirmButton:hover {
+  background-color: #2980b9;
+}
+
+.confirmButton:disabled {
+  background-color: #95a5a6;
+  cursor: not-allowed;
+}
+
+@keyframes modalSlideUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 768px) {
+  .refundModal {
+    width: 95%;
+    margin: 10px;
+  }
+  
+  .modalHeader h3 {
+    font-size: 1.3rem;
+  }
+  
+  .modalFooter {
+    flex-direction: column;
+  }
+  
+  .cancelButton, .confirmButton {
+    width: 100%;
+  }
+}

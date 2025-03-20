@@ -1,0 +1,248 @@
+.orderListContainer {
+  padding: 3rem 2rem;
+  background-color: var(--color-white);
+  border-radius: 1.2rem;
+  box-shadow: var(--light-shadow);
+}
+
+.orderListHeader {
+  margin-bottom: 2rem;
+}
+
+.orderListHeader h2 {
+  font-size: 2rem;
+  font-weight: 500;
+  margin-bottom: 1rem;
+}
+
+.orderListHeader p {
+  color: var(--color-text-darkgray);
+}
+
+.orderSort {
+  display: flex;
+  justify-content: end;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.sortBtn {
+  padding: 0.7rem 1.2rem;
+  border-radius: 0.5rem;
+  border: 1px solid var(--color-lightgray);
+  color: var(--color-text-darkgray);
+}
+
+.sortBtn:hover {
+  border: 1px solid var(--color-text-gray);
+  color: var(--color-text-lightblack);
+}
+
+.sortBtn.active {
+  border: 1px solid var(--color-main-light);
+  color: var(--color-main-dark);
+}
+
+.orderCard {
+  display: flex;
+  padding: 2rem 0;
+  border-bottom: 1px solid var(--color-lightergray);
+  justify-content: space-between;
+  cursor: pointer;
+}
+
+.orderLeft {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.imgWrap {
+  width: 100px;
+  height: 100px;
+  border-radius: 1.2rem;
+  overflow: hidden;
+}
+
+.imgWrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.2s;
+}
+
+.imgWrap:hover img {
+  transform: scale(1.05);
+}
+
+.noImg {
+  width: 100px;
+  height: 100px;
+  border-radius: 1.2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--color-faintgray);
+  color: var(--color-text-darkgray);
+}
+
+.orderText {
+  line-height: 1.5;
+}
+
+.optionName {
+  font-weight: 500;
+}
+
+.productName {
+  color: var(--color-text-darkgray);
+}
+
+.orderDate {
+  color: var(--color-text-gray);
+}
+
+.orderRight {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: right;
+}
+
+.paidStatus {
+  font-weight: 500;
+  color: var(--color-main-dark);
+}
+
+
+
+
+
+.orderTable {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+}
+
+.orderTable thead tr {
+  border: 1px solid var(--color-text-lightblack);
+  border-width: 2px 0 1px 0;
+}
+
+.orderTable th, .orderTable td {
+  padding: 1.2rem;
+}
+
+.orderTable th {
+  color: var(--color-text-lightblack);
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.orderTable th:hover {
+  background-color: var(--color-faintgray);
+}
+
+.orderTable th.date {
+  text-align: left;
+}
+
+.orderTable th .arrow {
+  margin-left: 5px;
+  font-size: 0.8em;
+}
+
+.orderTable tbody tr {
+  cursor: pointer;
+  border-bottom: 1px solid var(--color-lightgray);
+}
+
+.orderTable tbody tr:hover {
+  background-color: var(--color-faintgray);
+}
+
+.orderTable td:not(.date) {
+  text-align: center;
+}
+
+.orderDetailsContent {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.orderDetailsContent div {
+  flex: 0 0 120px;
+  padding: 8px;
+  background-color: #ffffff;
+  border-radius: 5px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.orderDetailsContent div h4 {
+  margin: 0 0 5px;
+  font-size: 0.8em;
+  color: #333;
+}
+
+.orderDetailsContent div p {
+  margin: 2px 0;
+  font-size: 0.7em;
+  color: #555;
+}
+
+.loading, .errorMessage, .noOrders {
+  margin: 80px 0;
+  text-align: center;
+  line-height: 1.5;
+  font-size: 1.4rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1em;
+}
+
+.retryButton, .shoppingButton {
+  margin-top: 10px;
+  padding: 10px 20px;
+  background-color: var(--color-main);
+  color: var(--color-white);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.retryButton:hover, .shoppingButton:hover {
+  background-color: var(--color-main-dark);
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.pagination button {
+  margin: 0 5px;
+  padding: 8px 12px;
+  background-color: var(--color-main);
+  color: var(--color-white);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.pagination button:not(:disabled) {
+  transition: background-color 0.3s;
+}
+
+.pagination button:hover {
+  background-color: var(--color-main-dark);
+}
+
+.pagination button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}

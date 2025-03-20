@@ -1,0 +1,34 @@
+.sidebarContainer {
+  padding-top: 6rem;
+}
+
+.sidebarTitle {
+  font-weight: 500;
+  font-size: 2.8rem;
+  margin-bottom: 1.2em;
+}
+
+.sidebarBox {
+  border: 1px solid var(--color-lightergray);
+  font-size: 1.4rem;
+  font-weight: 500;
+}
+
+.sidebarMenu {
+  display: flex;
+  justify-content: space-between;
+  padding: 1.2em;
+  cursor: pointer;
+}
+
+.sidebarMenu:hover,
+.sidebarMenu.selected {
+  background-color: var(--color-faintgray);
+  color: var(--color-main-dark);
+}
+
+.divider {
+  height: 1px;
+  border: 0;
+  background: var(--color-lightergray);
+}

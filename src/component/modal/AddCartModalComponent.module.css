@@ -1,0 +1,181 @@
+.addCartModalWrap {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+  
+.addCartModalContent {
+  background-color: var(--color-white);
+  width: 420px;
+  padding: 2rem;
+  border-radius: 1.6rem;
+  position: relative;
+}
+
+.productWrap {
+  display: flex;
+  padding-bottom: 1.6rem;
+  border-bottom: 1px solid var(--color-lightergray);
+  align-items: center;
+  gap: 1rem;
+}
+
+.productWrap .pImg {
+  width: 64px;
+  height: 83px;
+  border-radius: 10px;
+  background-color: var(--color-lightgray);
+  overflow: hidden;
+}
+
+.productWrap .pImg img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  image-rendering: optimizeSpeed;
+}
+
+.noImg {
+  width: 64px;
+  height: 83px;
+  border-radius: 10px;
+  background-color: var(--color-faintgray);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--color-text-gray);
+}
+
+.title {
+  line-height: 1.5;
+}
+
+.title .seller {
+  color: var(--color-main);
+}
+
+.title .pName {
+  font-size: 1.6rem;
+  font-weight: 500;
+}
+
+.title .originalPrice {
+  color: var(--color-text-gray);
+  text-decoration: line-through;
+}
+
+.title .pPrice {
+  font-weight: 500;
+}
+
+.pPrice .salesPer {
+  color: var(--color-red);
+}
+
+.optionWrap {
+  font-size: 1.4rem;
+  padding: 2rem 0;
+  border-bottom: 1px solid var(--color-lightergray);
+}
+
+.optionTotalWrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+}
+
+.optionTotalWrap .optionTotal {
+  font-size: 1.6rem;
+  font-weight: 500;
+}
+
+.optionTotalWrap .alterWrap {
+  border: 1px solid lightgray;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  height: 28px;
+}
+
+.alterWrap .alterBtn {
+  font-size: 18px;
+  font-weight: 600;
+  height: 100%;
+  width: 1.5em;
+  text-align: center;
+}
+
+.alterWrap .alterText {
+  font-size: 14px;
+  font-weight: 500;
+  min-width: 1.6em;
+  text-align: center;
+}
+
+.priceWrap {
+  padding: 2.5rem 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.priceWrap .totalPrice,
+.priceWrap .totalValue {
+  font-weight: 500;
+}
+
+.priceWrap .totalPrice {
+  font-size: 1.6rem;
+  font-weight: 500;
+}
+
+.priceWrap .totalValue {
+  font-size: 2rem;
+}
+
+.btnWrap {
+  display: flex;
+  gap: 8px;
+  justify-content: space-between;
+}
+  
+.cancleBtn,
+.submitBtn {
+  font-size: 1.6rem;
+  font-weight: 500;
+  width: 186px;
+  height: 3.2em;
+  border-radius: 0.5rem;
+}
+
+.cancleBtn {
+  border: 1px solid var(--color-lightgray);
+}
+
+.cancleBtn:hover {
+  background-color: var(--color-faintgray);
+}
+
+.submitBtn {
+  background-color: var(--color-main);
+  color: var(--color-white);
+}
+
+.submitBtn:hover {
+  background-image: linear-gradient(rgba(0,0,0,0.1),rgba(0,0,0,0.1));
+}
+
+.addCartModalWrap .bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}

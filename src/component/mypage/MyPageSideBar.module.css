@@ -1,0 +1,79 @@
+.greetings {
+  padding: 2.4rem 1.8rem;
+}
+
+.greetings h1 span:not(.name) {
+  font-weight: 500;
+  font-size: 2rem;
+}
+
+.name {
+  color: var(--color-main);
+  font-weight: 600;
+  font-size: 2.4rem;
+}
+
+.membershipWrap {
+  display: flex;
+  margin-top: 3rem;
+  border-radius: 1.2rem;
+  align-items: center;
+  background-color: var(--color-text-lightblack);
+}
+
+.membershipCard {
+  padding: 1.5rem;
+  flex: 1;
+}
+
+.memberTop {
+  color: var(--color-lightergray);
+  margin-bottom: 1.5rem;
+}
+
+.verLine {
+  width: 1px;
+  height: 30px;
+  background-color: var(--color-text-darkgray);
+}
+
+.memberBot {
+  font-size: 1.4rem;
+  font-weight: 500;
+  color: var(--color-white);
+}
+
+.typo {
+  font-size: 1.8rem;
+  font-weight: 900;
+  letter-spacing: -0.05em;
+  color: var(--color-white);
+}
+
+.typo.bronze {
+  color: #cd7f32;
+}
+
+.typo.silver {
+  color: #c0c0c0;
+}
+
+.typo.gold {
+  color: #d4af37;
+}
+
+.typo.platinum {
+  color: #e5e4e2;
+}
+
+.menuSection {
+  font-size: 1.6rem;
+}
+
+.menuIcon {
+  font-size: 1.5em;
+}
+
+.divider {
+  margin: 1rem 1.8rem;
+}

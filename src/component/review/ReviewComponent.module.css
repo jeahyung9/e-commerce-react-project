@@ -1,0 +1,99 @@
+.title {
+    font-size: 2rem;
+    font-weight: 500;
+    margin-bottom: 1.5em;
+}
+
+.reviewHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.2rem;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid var(--color-lightgray);
+}
+
+.sortBtn {
+    font-weight: 500;
+}
+
+.rateSelectBox {
+    min-width: 150px;
+}
+
+/* reviewComponent 시작 */
+.noReview {
+    padding: 10rem 0;
+    text-align: center;
+    color: var(--color-text-darkgray);
+    font-size: 1.8rem;
+    font-weight: 500;
+}
+
+.reviewItemWrap {
+    display: flex;
+    font-size: 1.4rem;
+    padding: 3rem 0;
+    border-bottom: 1px solid var(--color-faintgray);
+}
+
+.reviewLeft {
+    flex: 1 1 200px;
+}
+
+.name {
+    font-weight: 500;
+    margin-bottom: 0.7em;
+}
+
+.reviewRight {
+    flex: 1 1 100%;
+    position: relative;
+}
+
+.productName {
+    color: var(--color-text-darkgray);
+    margin-bottom: 1em;
+}
+
+.reviewTitle {
+    font-size: 1.6rem;
+    font-weight: 500;
+    margin-bottom: 1em;
+}
+
+.reviewContent {
+    line-height: 1.5;
+    overflow: hidden;
+    margin-bottom: 0.5rem;
+}
+
+.reviewContent:not(.expanded) {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 5;
+    line-clamp: 5;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.expandBtnRow {
+    display: flex;
+    justify-content: right;
+    margin-bottom: 1rem;
+}
+
+.expandBtn {
+    font-size: 1.2rem;
+}
+
+.reviewBottomRow {
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+}
+
+.reviewDate {
+    color: var(--color-text-darkgray);
+}
+/* reviewComponent 끝 */

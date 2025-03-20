@@ -1,0 +1,44 @@
+.addrContainer {
+  padding: 3rem 2rem;
+}
+
+.addrHeader {
+  margin-bottom: 4rem;
+}
+
+.addrHeader h2 {
+  font-size: 2rem;
+  font-weight: 500;
+  margin-bottom: 1rem;
+}
+
+.addrHeader p {
+  color: var(--color-text-darkgray);
+}
+
+.inputForm {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  font-size: 1.4rem;
+}
+
+.inputRow {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+}
+
+.inputLabel {
+  width: 10rem;
+  flex: none;
+}
+
+.findBtn {
+  flex: none;
+}
+
+.buttonWrap {
+  margin-top: 2rem;
+  text-align: right;
+}

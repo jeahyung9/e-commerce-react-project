@@ -1,0 +1,121 @@
+.loginWrap {
+  width: 100%;
+  user-select: none;
+  padding-top: 10rem;
+}
+
+.loginWrap .loginCard {
+  max-width: 50rem;
+  margin: 0 auto;
+  padding: 5rem;
+  border: 1px solid var(--color-faintgray);
+  border-radius: 1.2rem;
+  box-shadow: rgba(0, 0, 0, 0.07) 0px 3px 4px 0px;
+}
+
+.loginWrap .loginCard h2 {
+  font-size: 2.4rem;
+  font-weight: 500;
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.loginWrap .idInput,
+.loginWrap .pwInput {
+  width: 100%;
+  margin-bottom: 1rem;
+}
+
+.loginWrap .idInput input,
+.loginWrap .pwInput input {
+  width: 100%;
+  padding: 0.8em;
+  outline: none;
+  border: 1px solid var(--color-lightgray);
+  border-radius: 0.5rem;
+  font-size: 1.4rem;
+}
+
+.loginWrap .idInput input:focus,
+.loginWrap .pwInput input:focus {
+  border: 1px solid var(--color-main);
+}
+
+.loginWrap .loginStatus {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.loginWrap .keepCheck {
+  display: block;
+}
+
+.loginWrap .findMember {
+  text-align: right;
+}
+
+.loginWrap .findMember a {
+  padding: 2px;
+  color: var(--color-lightblack);
+}
+
+.loginWrap .findMember svg {
+  margin: 0 5px;
+}
+
+.loginWrap .loginBtn,
+.loginWrap .signupBtn {
+  display: block;
+  width: 100%;
+  padding: 1.6rem 0;
+  border-radius: 0.5rem;
+  font-size: 1.4rem;
+  font-weight: 500;
+}
+
+.loginWrap .loginBtn {
+  color: var(--color-white);
+  background-color: var(--color-main);
+  margin-bottom: 0.5rem;
+}
+
+.loginWrap .signupBtn {
+  text-align: center;
+  color: var(--color-main);
+  border: 1px solid var(--color-main);
+  margin-bottom: 4rem;
+}
+
+.socialTitle {
+  margin: 0 3em 3rem;
+  display: flex;
+  align-items: center;
+  gap: 1em;
+  color: var(--color-text-darkgray);
+}
+
+.socialTitle .horLine {
+  flex-grow: 1;
+  height: 1px;
+  background-color: var(--color-lightgray);
+}
+
+.socialLogin {
+  display: flex;
+  justify-content: center;
+  gap: 3rem;
+}
+
+.socialLogin .socialBtn {
+  display: block;
+  width: 5rem;
+  height: 5rem;
+  border-radius: 50%;
+}
+
+.socialBtn svg {
+  width: 100%;
+  height: 100%;
+}

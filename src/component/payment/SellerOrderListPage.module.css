@@ -1,0 +1,68 @@
+/* SellerOrderListPage.module.css */
+.orderListContainer {
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.orderListHeader {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.filterContainer {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.orderTable {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+}
+
+.orderTable th, .orderTable td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: center;
+  white-space: nowrap;
+}
+
+.orderTable th {
+  background-color: #f2f2f2;
+  cursor: pointer;
+}
+
+.orderTable button {
+  background-color: #4CAF50; /* Green */
+  border: none;
+  color: white;
+  padding: 5px 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 12px;
+  margin: 2px;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.orderTable button:hover {
+  background-color: #45a049;
+}
+
+.noOrders {
+  text-align: center;
+  color: #888;
+}
+
+.loadingSpinner {
+  text-align: center;
+  font-size: 1.2em;
+}
+
+.errorMessage {
+  color: red;
+  text-align: center;
+}

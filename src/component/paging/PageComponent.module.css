@@ -1,0 +1,36 @@
+.paginationContainer {
+    margin: 2.4rem;
+    display: flex;
+    justify-content: center;
+    gap: 0.4em;
+}
+
+.prev,
+.next,
+.pageNum {
+    width: 3em;
+    height: 3em;
+    text-align: center;
+    border-radius: 50% !important;
+    min-width: auto !important;
+    transition: background-color 0.1s;
+}
+
+.prev,
+.next {
+    font-weight: 500;
+    background-color: var(--color-white);
+}
+
+.prev:hover,
+.next:hover {
+    background-color: var(--color-faintgray);
+}
+
+.pageNum.active {
+    background-color: var(--color-lightgray);
+}
+
+.pageNum:not(.active):hover {
+    background-color: var(--color-faintgray);
+}

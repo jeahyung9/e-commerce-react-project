@@ -1,0 +1,94 @@
+.wrap {
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  padding: 20rem 4rem;
+  user-select: none;
+}
+
+.bg {
+  z-index: -1;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('../../assets/img/loginBg.svg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  opacity: 0.5;
+}
+
+.adminLoginWrap {
+  display: flex;
+  border-radius: 2.4rem;
+  width: 1050px;
+  height: 70vh;
+  max-height: 720px;
+  box-shadow: var(--drop-dark-shadow-right);
+  background-color: var(--color-white);
+  overflow: hidden;
+}
+
+.imgContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  width: 40%;
+  background-color: var(--color-main-light);
+}
+
+.loginWrap {
+  width: 60%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.loginContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 36rem;
+}
+
+.loginTitle {
+  font-size: 1.8rem;
+  font-weight: 500;
+  margin-bottom: 3rem;
+}
+
+.loginBtn {
+  width: 100%;
+  padding: 1rem;
+  font: inherit;
+  font-size: 1.2rem;
+}
+
+@media screen and (max-width: 768px) {
+  .wrap {
+    padding: 5%;
+  }
+
+  .adminLoginWrap {
+    height: auto;
+    max-height: 100vh;
+  }
+
+  .imgContainer {
+    display: none;
+  }
+
+  .loginWrap {
+    width: 100%;
+    padding: 5rem 2rem;
+    overflow-y: scroll;
+  }
+
+  .loginWrap::-webkit-scrollbar {
+    display: none;
+  }
+}

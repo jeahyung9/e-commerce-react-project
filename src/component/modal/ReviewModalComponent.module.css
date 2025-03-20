@@ -1,0 +1,71 @@
+.reviewModalWrap{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.bg{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modalContent{
+    background-color: var(--color-white);
+    width: 800px;
+    padding: 3rem;
+    border-radius: 8px;
+    position: relative;
+}
+
+.modalName {
+    font-size: 2rem;
+    font-weight: 500;
+}
+
+.container {
+    margin-top: 3rem;
+}
+
+.titleWrap,
+.ratingWrap,
+.contentWrap {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+.ratingWrap,
+.contentWrap {
+    margin-top: 2rem;
+}
+
+.inputLabel {
+    font-size: 1.4rem;
+    flex: 0 0 100px;
+}
+
+.inputWrap {
+    font-size: 1.4rem;
+    flex: 1;
+}
+
+.ratingWrap .inputWrap {
+    font-size: 2rem;
+}
+
+.buttonWrap {
+    margin-top: 2rem;
+    display: flex;
+    justify-content: end;
+    gap: 1rem;
+}

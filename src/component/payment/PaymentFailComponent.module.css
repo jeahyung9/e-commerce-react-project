@@ -1,0 +1,239 @@
+/* src/components/Payment/PaymentFailComponent.css */
+.paymentFailContainer {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
+.paymentFailContent {
+  background: #fff;
+  border-radius: 15px;
+  padding: 40px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.failIcon {
+  margin-bottom: 30px;
+  animation: shake 0.5s ease-in-out;
+}
+
+.failIcon i {
+  font-size: 80px;
+  color: #e74c3c;
+}
+
+.paymentFailHeader {
+  margin-bottom: 30px;
+}
+
+.paymentFailHeader h2 {
+  font-size: 32px;
+  color: #2c3e50;
+  margin-bottom: 15px;
+}
+
+.paymentFailHeader .errorMessage {
+  color: #e74c3c;
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.errorCode {
+  color: #7f8c8d;
+  font-size: 14px;
+  font-family: monospace;
+  background: #f8f9fa;
+  padding: 5px 10px;
+  border-radius: 4px;
+  display: inline-block;
+}
+
+.suggestionText {
+  text-align: left;
+  margin: 30px 0;
+  padding: 20px;
+  background: #f8f9fa;
+  border-radius: 10px;
+}
+
+.suggestionText p {
+  color: #2c3e50;
+  margin-bottom: 15px;
+  font-weight: 500;
+}
+
+.suggestionText ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.suggestionText li {
+  color: #7f8c8d;
+  margin-bottom: 10px;
+  padding-left: 20px;
+  position: relative;
+}
+
+.suggestionText li:before {
+  content: "•";
+  color: #e74c3c;
+  position: absolute;
+  left: 0;
+}
+
+.actionButtons {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+
+.retryButton,
+.ordersButton,
+.mainButton {
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.retryButton {
+  background: #3498db;
+  color: white;
+  border: none;
+}
+
+.retryButton:hover {
+  background: #2980b9;
+}
+
+.ordersButton {
+  background: white;
+  color: #3498db;
+  border: 2px solid #3498db;
+}
+
+.ordersButton:hover {
+  background: #f8f9fa;
+}
+
+.mainButton {
+  background: #95a5a6;
+  color: white;
+  border: none;
+}
+
+.mainButton:hover {
+  background: #7f8c8d;
+}
+
+.supportInfo {
+  margin-top: 30px;
+  padding-top: 30px;
+  border-top: 1px solid #eee;
+}
+
+.supportInfo p {
+  color: #7f8c8d;
+  margin-bottom: 10px;
+}
+
+.supportContact {
+  font-size: 18px;
+  color: #2c3e50;
+  font-weight: 600;
+  margin: 10px 0;
+}
+
+.supportHours {
+  font-size: 14px;
+  color: #95a5a6;
+}
+
+/* 애니메이션 */
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  25% { transform: translateX(-10px); }
+  75% { transform: translateX(10px); }
+}
+
+/* 로딩 스피너 */
+.loadingSpinner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 200px;
+  color: #3498db;
+  font-size: 18px;
+}
+
+/* 반응형 디자인 */
+@media (max-width: 768px) {
+  .paymentFailContent {
+    padding: 30px 20px;
+  }
+
+  .actionButtons {
+    flex-direction: column;
+  }
+
+  .retryButton,
+  .ordersButton,
+  .mainButton {
+    width: 100%;
+  }
+}
+
+/* 다크 모드 지원 */
+@media (prefers-color-scheme: dark) {
+  .paymentFailContent {
+    background: #1a1a1a;
+  }
+
+  .paymentFailHeader h2 {
+    color: #fff;
+  }
+
+  .suggestionText {
+    background: #242424;
+  }
+
+  .suggestionText p {
+    color: #fff;
+  }
+
+  .suggestionText li {
+    color: #bdc3c7;
+  }
+
+  .errorCode {
+    background: #242424;
+    color: #e74c3c;
+  }
+
+  .ordersButton {
+    background: #242424;
+    border-color: #3498db;
+    color: #3498db;
+  }
+
+  .ordersButton:hover {
+    background: #333;
+  }
+
+  .supportInfo {
+    border-color: #333;
+  }
+
+  .supportContact {
+    color: #fff;
+  }
+
+  .supportInfo p,
+  .supportHours {
+    color: #95a5a6;
+  }
+}

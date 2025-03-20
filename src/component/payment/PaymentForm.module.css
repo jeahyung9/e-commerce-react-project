@@ -1,0 +1,298 @@
+.wrap {
+  background-color: var(--color-faintgray);
+  height: 100%;
+  padding-bottom: 100px;
+}
+
+.paymentWrap {
+  max-width: 1050px;
+  margin: 0 auto;
+}
+
+.title {
+  display: block;
+  color: var(--color-text-black);
+  font-weight: 600;
+  font-size: 2.8rem;
+  padding: 50px 0;
+  text-align: center;
+}
+
+.sectionContainer {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.sectionContainer section {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.productList {
+  flex: 1;
+}
+
+.paymentSummary {
+  flex: 0 0 40%;
+}
+
+.tab {
+  border-radius: 12px;
+  background-color: var(--color-white);
+  font-size: 1.6rem;
+  box-shadow: rgba(0, 0, 0, 0.07) 0px 3px 4px 0px;
+}
+
+.tabTitle {
+  font-weight: 600;
+  font-size: 1.8rem;
+}
+
+.productList .tabTitle {
+  padding: 2rem;
+  border-bottom: 1px solid var(--color-lightergray);
+  display: flex;
+  justify-content: space-between;
+  cursor: pointer;
+}
+
+.productWrap:not(.expanded) {
+  display: none;
+}
+
+.productWrap.expanded {
+  display: block;
+}
+
+.productItem {
+  display: flex;
+  padding: 2rem;
+}
+
+.productItem:not(:last-of-type) {
+  border-bottom: 1px solid var(--color-lightergray);
+}
+
+.productImage {
+  width: 64px;
+  height: 83px;
+  border-radius: 1rem;
+  margin-right: 1rem;
+  background-color: var(--color-lightgray);
+  overflow: hidden;
+  flex: none;
+}
+
+.productImage img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.productDetails {
+  flex: 1;
+  display: flex;
+  justify-content: space-between;
+}
+
+.seller {
+  font-size: 1.4rem;
+  margin-bottom: 0.7rem;
+  color: var(--color-main);
+}
+
+.pOpt {
+  font-weight: 500;
+  margin-bottom: 0.7rem;
+}
+
+.pName {
+  color: var(--color-text-darkgray);
+}
+
+.detailsRight {
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  align-items: end;
+}
+
+.tPrice {
+  margin-bottom: 0.7rem;
+  font-weight: 600;
+}
+
+.paymentForm {
+  padding: 2rem;
+  color: var(--color-text-lightblack);
+}
+
+.formGroup:not(:last-of-type) {
+  margin-bottom: 2rem;
+}
+
+.formGroup label {
+  display: block;
+  margin-bottom: 1rem;
+  color: #2c3e50;
+  font-weight: 500;
+}
+
+.formGroup input {
+  width: 100%;
+  padding: 1rem 1.4rem;
+  border: 1px solid var(--color-lightgray);
+  border-radius: 1.2rem;
+  font-size: 1.4rem;
+  transition: border-color 0.2s;
+}
+
+.formGroup input:focus {
+  outline: none;
+  border-color: var(--color-main-dark);
+}
+
+.amountInputWrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.currency {
+  position: absolute;
+  right: 1rem;
+  color: #666;
+}
+
+.pgProviders {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  margin-top: 0.5rem;
+}
+
+.pgProviderItem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.pgProviderItem:hover {
+  border-color: var(--color-main);
+  background-color: var(--color-faintgray);
+}
+
+.pgProviderItem.selected {
+  border-color: var(--color-main);
+  background-color: var(--color-main-faint);
+  color: var(--color-main-dark);
+}
+
+.pgIcon {
+  font-size: 2.4rem;
+  height: 3rem;
+  margin-bottom: 1rem;
+}
+
+.pgIcon svg,
+.pgIcon img {
+  height: 100%;
+}
+
+.pgName {
+  font-size: 1.2rem;
+  text-align: center;
+}
+
+.stickyObj {
+  position: sticky;
+  top: 100px;
+}
+
+.priceTab {
+  padding: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+.priceTab .tabTitle {
+  margin-bottom: 2.3rem;
+}
+
+.priceTab .priceRow {
+  margin-bottom: 1.8rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.priceTab .price {
+  font-weight: 600;
+}
+
+.priceTab .price.discount {
+  color: var(--color-red);
+}
+
+.priceTab .horLine {
+  height: 1px;
+  background-color: var(--color-lightgray);
+  margin-bottom: 2rem;
+}
+
+.termsTab {
+  padding: 2rem;
+  margin-bottom: 2rem;
+}
+
+.paymentBtn {
+  display: block;
+  width: 100%;
+  background-color: var(--color-main);
+  color: var(--color-white);
+  font-size: 2rem;
+  font-weight: 600;
+  padding: 2rem 0;
+  border-radius: 1.2rem;
+  box-shadow: rgba(0, 0, 0, 0.07) 0px 3px 4px 0px;
+}
+
+.paymentBtn:hover:not(:disabled) {
+  background-image: linear-gradient(rgba(0,0,0,0.1),rgba(0,0,0,0.1));
+}
+
+.paymentBtn:disabled {
+  background-color: var(--color-lightgray);
+  color: var(--color-text-gray);
+  cursor: default;
+}
+
+@media (max-width: 768px) {
+  .paymentContainer {
+    margin: 1.5rem auto;
+    padding: 0 15px;
+  }
+
+  .paymentCard {
+    padding: 1.5rem;
+  }
+
+  .pgProviders {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .summaryRow strong {
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .pgProviders {
+    grid-template-columns: 1fr;
+  }
+}

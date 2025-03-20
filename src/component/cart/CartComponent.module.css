@@ -1,0 +1,125 @@
+.productCard {
+    padding: 2rem;
+    position: relative;
+}
+
+.productCard:not(:last-of-type) {
+    border-bottom: 1px solid var(--color-lightgray);
+}
+
+.productCard .btnRow {
+    position: absolute;
+    width: calc(100% - 4rem);
+    display: flex;
+    justify-content: space-between;
+}
+
+.productCard .removeBtn {
+    color: var(--color-text-gray);
+    padding: 0.7rem;
+    line-height: 1;
+}
+
+.removeBtn:hover {
+    color: var(--color-text-darkgray);
+}
+
+.productCard .cardInner {
+    margin-left: 3rem;
+}
+
+.productCard .seller {
+    font-size: 1.4rem;
+    margin-bottom: 0.7rem;
+    color: var(--color-main);
+}
+
+.productCard .pOpt {
+    font-weight: 500;
+    margin-bottom: 0.7rem;
+}
+
+.productCard .pName {
+    color: var(--color-text-darkgray);
+    margin-bottom: 1.2rem;
+}
+
+.productCard .pImgSelect {
+    display: flex;
+    gap: 1.2rem;
+}
+
+.productCard .pImgSelect .pImg {
+    width: 64px;
+    height: 83px;
+    border-radius: 10px;
+    background-color: var(--color-lightgray);
+    overflow: hidden;
+}
+
+.pImg img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.productCard .pSelect {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.productCard .pPrice {
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+}
+
+.productCard .oPrice {
+    color: var(--color-text-gray);
+    font-size: 1.4rem;
+    text-decoration: line-through;
+}
+
+.productCard .dPrice {
+    font-weight: 600;
+}
+
+.productCard .alterCnt {
+    display: flex;
+    width: 96px;
+    height: 36px;
+    background-color: var(--color-faintgray);
+    border-radius: 18px;
+    padding: 8px;
+}
+
+.productCard .alterCnt:hover {
+    background-image: linear-gradient(rgba(0,0,0,0.05),rgba(0,0,0,0.05));
+}
+
+.productCard .alterCnt button,
+.productCard .alterCnt .pCount {
+    display: inline-block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.productCard .alterCnt button {
+    width: 20px;
+    height: 20px;
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+.productCard .alterCnt .pCount {
+    width: calc(96px - (20px * 2));
+    height: 100%;
+    font-size: 1.8rem;
+    font-weight: 600;
+}
+
+.noProduct {
+    padding: 2rem;
+}

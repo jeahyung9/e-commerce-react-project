@@ -1,0 +1,322 @@
+/* src/components/Payment/RefundHistoryComponent.css */
+.refundHistoryContainer {
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
+.refundHistoryHeader {
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+.refundHistoryHeader h2 {
+  font-size: 32px;
+  color: #2c3e50;
+  margin-bottom: 10px;
+}
+
+.refundHistoryHeader p {
+  color: #7f8c8d;
+  font-size: 16px;
+}
+
+.refundHistoryControls {
+  margin-bottom: 30px;
+}
+
+.filterButtons {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.filterButton {
+  padding: 8px 16px;
+  border: 2px solid #ddd;
+  border-radius: 20px;
+  background: white;
+  color: #7f8c8d;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.filterButton:hover {
+  border-color: #3498db;
+  color: #3498db;
+}
+
+.filterButton.active {
+  background: #3498db;
+  border-color: #3498db;
+  color: white;
+}
+
+.refundHistoryTable {
+  background: white;
+  border-radius: 15px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  margin-bottom: 30px;
+}
+
+.refundHistoryContainer table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.refundHistoryContainer th {
+  background: #f8f9fa;
+  padding: 15px;
+  text-align: left;
+  color: #2c3e50;
+  font-weight: 600;
+  border-bottom: 2px solid #eee;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  position: relative;
+}
+
+.refundHistoryContainer th:hover {
+  background: #e9ecef;
+}
+
+.sortArrow {
+  margin-left: 5px;
+  font-size: 12px;
+}
+
+.refundHistoryContainer td {
+  padding: 15px;
+  border-bottom: 1px solid #eee;
+  color: #2c3e50;
+}
+
+.refundRow {
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.refundRow:hover {
+  background: #f8f9fa;
+}
+
+.productInfo {
+  max-width: 300px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.amount {
+  font-weight: 600;
+  color: #3498db;
+}
+
+.statusBadge {
+  display: inline-block;
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.statusBadgePending {
+  background: #fff3cd;
+  color: #856404;
+}
+
+.statusBadgeSuccess {
+  background: #d4edda;
+  color: #155724;
+}
+
+.statusBadgeRejected {
+  background: #f8d7da;
+  color: #721c24;
+}
+
+.noRefunds {
+  text-align: center;
+  padding: 40px;
+  color: #7f8c8d;
+  background: white;
+  border-radius: 15px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  margin-top: 30px;
+}
+
+.pagination button {
+  padding: 8px 16px;
+  border: 2px solid #3498db;
+  border-radius: 8px;
+  background: white;
+  color: #3498db;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.pagination button:hover:not(:disabled) {
+  background: #3498db;
+  color: white;
+}
+
+.pagination button:disabled {
+  border-color: #ddd;
+  color: #ddd;
+  cursor: not-allowed;
+}
+
+.pageInfo {
+  color: #2c3e50;
+  font-weight: 500;
+}
+
+/* 로딩 스피너 */
+.loadingSpinner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 200px;
+  color: #3498db;
+  font-size: 18px;
+}
+
+/* 에러 메시지 */
+.errorMessage {
+  text-align: center;
+  padding: 30px;
+  background: #fdeaea;
+  border-radius: 10px;
+  color: #e74c3c;
+  margin: 20px 0;
+}
+
+.errorMessage h3 {
+  margin-bottom: 10px;
+}
+
+/* 반응형 디자인 */
+@media (max-width: 768px) {
+  .filterButtons {
+    overflow-x: auto;
+    padding-bottom: 10px;
+    justify-content: flex-start;
+  }
+
+  .refundHistoryContainer table {
+    display: block;
+    overflow-x: auto;
+  }
+
+  .refundHistoryContainer th,
+  .refundHistoryContainer td {
+    min-width: 120px;
+  }
+
+  .refundHistoryContainer {
+    padding: 0 10px;
+  }
+}
+
+/* 다크 모드 지원 */
+@media (prefers-color-scheme: dark) {
+  .refundHistoryContainer {
+    background: #1a1a1a;
+  }
+
+  .refundHistoryHeader h2 {
+    color: #fff;
+  }
+
+  .filterButton {
+    background: #242424;
+    border-color: #333;
+    color: #bdc3c7;
+  }
+
+  .filterButton:hover {
+    border-color: #3498db;
+    color: #3498db;
+  }
+
+  .refundHistoryTable {
+    background: #242424;
+  }
+
+  .refundHistoryContainer th {
+    background: #333;
+    color: #fff;
+    border-bottom-color: #444;
+  }
+
+  .refundHistoryContainer th:hover {
+    background: #404040;
+  }
+
+  .refundHistoryContainer td {
+    border-bottom-color: #333;
+    color: #fff;
+  }
+
+  .refundRow:hover {
+    background: #333;
+  }
+
+  .noRefunds {
+    background: #242424;
+    color: #bdc3c7;
+  }
+
+  .pagination button {
+    background: #242424;
+  }
+
+  .pagination button:hover:not(:disabled) {
+    background: #3498db;
+  }
+
+  .pageInfo {
+    color: #fff;
+  }
+
+  .statusBadgePending {
+    background: #453405;
+    color: #ffd970;
+  }
+
+  .statusBadgeSuccess {
+    background: #0a3622;
+    color: #28a745;
+  }
+
+  .statusBadgeRejected {
+    background: #45070f;
+    color: #dc3545;
+  }
+}
+
+/* 애니메이션 */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.refundHistoryContainer {
+  animation: fadeIn 0.5s ease-out;
+}

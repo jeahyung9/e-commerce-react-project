@@ -1,0 +1,17 @@
+.btnWrap {
+    margin-bottom: 3rem;
+    display: flex;
+    justify-content: end;
+    font-size: 1.4rem;
+    font-weight: 500;
+}
+
+.productsContainer {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+}
+
+.itemWrap {
+    min-width: 0;
+}

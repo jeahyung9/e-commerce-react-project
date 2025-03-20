@@ -1,0 +1,304 @@
+/* src/components/Payment/PaymentHistoryComponent.css */
+.paymentHistoryContainer {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px;
+    min-height: 100vh;
+    background-color: #f8f9fa;
+  }
+  
+  .paymentHistoryHeader {
+    text-align: center;
+    margin-bottom: 40px;
+  }
+  
+  .paymentHistoryHeader h2 {
+    font-size: 32px;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 10px;
+  }
+  
+  .paymentHistoryHeader p {
+    color: #666;
+    font-size: 16px;
+  }
+  
+  .paymentHistoryControls {
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    margin-bottom: 30px;
+  }
+  
+  .searchForm {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .dateRange {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+  }
+  
+  .dateInput {
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 14px;
+    flex: 1;
+  }
+  
+  .dateRange span {
+    color: #666;
+  }
+  
+  .filterGroup {
+    display: flex;
+    gap: 15px;
+  }
+  
+  .filterSelect {
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 14px;
+    min-width: 150px;
+    background-color: white;
+    cursor: pointer;
+  }
+  
+  .searchBox {
+    display: flex;
+    flex: 1;
+  }
+  
+  .searchInput {
+    flex: 1;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 8px 0 0 8px;
+    font-size: 14px;
+  }
+  
+  .searchButton {
+    padding: 12px 24px;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 0 8px 8px 0;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .searchButton:hover {
+    background-color: #2980b9;
+  }
+  
+  .paymentList {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .paymentItem {
+    background: white;
+    border-radius: 12px;
+    padding: 25px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .paymentItem:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+  }
+  
+  .paymentHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  .paymentDate {
+    color: #666;
+    font-size: 14px;
+  }
+  
+  .statusBadge {
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 600;
+  }
+  
+  .statusBadge.paid {
+    background-color: #e8f5e9;
+    color: #2e7d32;
+  }
+  
+  .statusBadge.cancelled {
+    background-color: #fafafa;
+    color: #616161;
+  }
+  
+  .statusBadge.refunded {
+    background-color: #e3f2fd;
+    color: #1976d2;
+  }
+  
+  .statusBadge.failed {
+    background-color: #ffebee;
+    color: #c62828;
+  }
+  
+  .paymentDetails {
+    border-top: 1px solid #eee;
+    padding-top: 20px;
+  }
+  
+  .paymentInfo {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+  
+  .infoRow {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  }
+  
+  .infoRow span {
+    color: #666;
+    font-size: 13px;
+  }
+  
+  .infoRow strong {
+    color: #333;
+    font-size: 15px;
+    font-weight: 600;
+  }
+  
+  .pagination {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 40px;
+  }
+  
+  .pageButton {
+    padding: 8px 16px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    background: white;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .pageButton:hover {
+    border-color: #3498db;
+    color: #3498db;
+  }
+  
+  .pageButton.active {
+    background: #3498db;
+    color: white;
+    border-color: #3498db;
+  }
+  
+  .loadingSpinnerContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 300px;
+  }
+  
+  .loadingSpinner {
+    width: 40px;
+    height: 40px;
+    border: 4px solid #f3f3f3;
+    border-top: 4px solid #3498db;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+  }
+  
+  .emptyState {
+    text-align: center;
+    padding: 60px 20px;
+    color: #666;
+  }
+  
+  .emptyState i {
+    font-size: 48px;
+    margin-bottom: 20px;
+    color: #ddd;
+  }
+  
+  .errorMessage {
+    background-color: #fff5f5;
+    color: #e53e3e;
+    padding: 20px;
+    border-radius: 12px;
+    text-align: center;
+    margin: 20px 0;
+  }
+  
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+  
+  /* 반응형 디자인 */
+  @media (max-width: 768px) {
+    .paymentHistoryHeader h2 {
+      font-size: 24px;
+    }
+  
+    .filterGroup {
+      flex-direction: column;
+    }
+  
+    .dateRange {
+      flex-direction: column;
+    }
+  
+    .paymentInfo {
+      grid-template-columns: 1fr;
+      gap: 15px;
+    }
+  
+    .searchBox {
+      flex-direction: column;
+    }
+  
+    .searchInput {
+      border-radius: 8px;
+    }
+  
+    .searchButton {
+      border-radius: 8px;
+      margin-top: 10px;
+    }
+  }
+  
+  /* 애니메이션 */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .paymentHistoryContainer {
+    animation: fadeIn 0.5s ease-out;
+  }

@@ -1,0 +1,106 @@
+.paymentCompleteContainer {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
+.paymentCompleteContent {
+  background: #fff;
+  border-radius: 15px;
+  padding: 40px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.successIcon {
+  margin-bottom: 30px;
+}
+
+.successIcon i {
+  font-size: 80px;
+  color: #2ecc71;
+}
+
+.paymentCompleteHeader {
+  margin-bottom: 30px;
+}
+
+.paymentCompleteHeader h2 {
+  font-size: 32px;
+  color: #2c3e50;
+  margin-bottom: 15px;
+}
+
+.orderInfo {
+  text-align: left;
+  margin: 30px 0;
+  padding: 20px;
+  background: #f8f9fa;
+  border-radius: 10px;
+}
+
+.orderInfo p {
+  color: #2c3e50;
+  margin-bottom: 10px;
+  font-weight: 500;
+}
+
+.actionButtons {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+
+.ordersButton,
+.mainButton {
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.ordersButton {
+  background: #3498db;
+  color: white;
+  border: none;
+}
+
+.ordersButton:hover {
+  background: #2980b9;
+}
+
+.mainButton {
+  background: #95a5a6;
+  color: white;
+  border: none;
+}
+
+.mainButton:hover {
+  background: #7f8c8d;
+}
+
+.supportInfo {
+  margin-top: 30px;
+  padding-top: 30px;
+  border-top: 1px solid #eee;
+}
+
+.supportInfo p {
+  color: #7f8c8d;
+  margin-bottom: 10px;
+}
+
+.supportContact {
+  font-size: 18px;
+  color: #2c3e50;
+  font-weight: 600;
+  margin: 10px 0;
+}
+
+.supportHours {
+  font-size: 14px;
+  color: #95a5a6;
+}

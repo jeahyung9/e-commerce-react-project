@@ -1,0 +1,6 @@
+.container {
+  background-color: var(--color-white);
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: var(--light-shadow);
+}

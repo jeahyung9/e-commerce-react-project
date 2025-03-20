@@ -1,0 +1,138 @@
+.wrap {
+    background-color: var(--color-faintgray);
+    height: 100%;
+    padding-bottom: 100px;
+}
+
+.cartWrap {
+    max-width: 1050px;
+    margin: 0 auto;
+}
+
+.title {
+    display: block;
+    color: var(--color-text-black);
+    font-weight: 600;
+    font-size: 2.8rem;
+    padding: 50px 0;
+    text-align: center;
+}
+
+.sectionContainer {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.sectionContainer section {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.selection {
+    flex: 1;
+}
+
+.order {
+    flex: 0 0 40%;
+    position: relative;
+}
+
+.tab {
+    border-radius: 12px;
+    background-color: var(--color-white);
+    font-size: 1.6rem;
+    box-shadow: rgba(0, 0, 0, 0.07) 0px 3px 4px 0px;
+}
+
+.tabTitle {
+    font-weight: 600;
+    font-size: 1.8rem;
+}
+
+.deleteTab,
+.priceTab {
+    padding: 2rem;
+}
+
+.deleteTab {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.deleteTab label[for='allSelect'] {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    cursor: pointer;
+}
+
+.delBtn {
+    color: var(--color-red);
+    font-weight: 600;
+    border: 1px solid var(--color-lightgray);
+    border-radius: 0.5rem;
+    padding: 0 1.2rem;
+    height: 3.6rem;
+    background-color: var(--color-white);
+}
+
+.delBtn:hover {
+    background-color: var(--color-faintgray);
+}
+
+.productTab .productTitle {
+    padding: 2rem;
+    border-bottom: 1px solid var(--color-lightgray);
+}
+
+.order .stickyObj {
+    position: sticky;
+    top: 100px;
+}
+
+.priceTab {
+    margin-bottom: 1.5rem;
+}
+
+.priceTab .tabTitle {
+    margin-bottom: 2.3rem;
+}
+
+.priceTab .priceRow {
+    margin-bottom: 1.8rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+.priceTab .price {
+    font-weight: 600;
+}
+
+.priceTab .price.discount {
+    color: var(--color-red);
+}
+
+.priceTab .horLine {
+    height: 1px;
+    background-color: var(--color-lightgray);
+    margin-bottom: 2rem;
+}
+
+.purchaseBtn {
+    display: block;
+    width: 100%;
+    background-color: var(--color-main);
+    color: var(--color-white);
+    font-size: 2rem;
+    font-weight: 600;
+    padding: 2rem 0;
+    border-radius: 1.2rem;
+    box-shadow: rgba(0, 0, 0, 0.07) 0px 3px 4px 0px;
+}
+
+.purchaseBtn:hover {
+    background-image: linear-gradient(rgba(0,0,0,0.1),rgba(0,0,0,0.1));
+}

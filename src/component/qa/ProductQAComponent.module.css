@@ -1,0 +1,125 @@
+.headerWrap {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 4rem;
+}
+
+.sectionTitle {
+    font-size: 2.2rem;
+    font-weight: 500;
+    margin-bottom: 1rem;
+}
+
+.sectionSubtitle {
+    line-height: 1.5;
+    color: var(--color-text-gray);
+}
+
+.table {
+    font-size: 1.4rem;
+    width: 100%;
+}
+
+.table thead {
+    text-align: center;
+}
+
+.table thead tr {
+    border: 1px solid var(--color-text-lightblack);
+    border-width: 2px 0 1px 0;
+}
+
+.table thead tr th {
+    padding: 1.5em 0;
+    font-weight: 500;
+}
+
+.qaTab {
+    cursor: pointer;
+    border-bottom: 1px solid var(--color-lightergray);
+}
+
+.qaTab:hover {
+    background-color: var(--color-faintgray);
+}
+
+.qaTab td {
+    padding: 2em 1.5em;
+    white-space: nowrap;
+}
+
+.qaTab td.qaTitle {
+    width: 70%;
+}
+
+.qaTab td.secretTitle {
+    color: var(--color-text-darkgray);
+}
+
+.qaTab td.secretTitle p {
+    display: flex;
+    align-items: center;
+    gap: 0.5em;
+}
+
+.qaTab .mySecret {
+    color: var(--color-text-black);
+}
+
+.qaTab td:not(.qaTitle, .answered) {
+    color: var(--color-text-darkgray);
+    text-align: center;
+}
+
+.qaTab td.answered {
+    color: var(--color-main-dark);
+}
+
+.qaTabContentRow {
+    display: none;
+    border-bottom: 1px solid var(--color-lightergray);
+    background-color: var(--color-main-faint);
+}
+
+.qaTabContentRow.expanded {
+    display: table-row;
+}
+
+.qaTabContent {
+    padding: 1.5em 2em;
+}
+
+.questionWrap,
+.answerWrap {
+    display: flex;
+    gap: 1em;
+}
+
+.answerWrap {
+    margin-top: 2rem;
+}
+
+.iconWrap {
+    flex: 0 0 24px;
+}
+
+.question,
+.answer {
+    font-size: 1.4rem;
+    line-height: 1.5;
+}
+
+.btnWrap {
+    display: flex;
+    gap: 1em;
+    justify-content: right;
+    margin-top: 2rem;
+}
+
+.modifyBtn {
+    color: var(--color-main-dark);
+}
+
+.deleteBtn {
+    color: var(--color-red);
+}

@@ -1,0 +1,11 @@
+.wrap {
+  padding: 3rem 2rem 2rem;
+}
+
+.title {
+  font-size: 2rem;
+  font-weight: 500;
+  padding-bottom: 2rem;
+  border-bottom: 2px solid var(--color-text-lightblack);
+  margin-bottom: 1.5rem;
+}

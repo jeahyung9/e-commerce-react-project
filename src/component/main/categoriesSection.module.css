@@ -1,0 +1,158 @@
+.section {
+  margin-bottom: 10rem;
+}
+
+.title {
+  display: flex;
+  gap: 1em;
+  align-items: center;
+  margin-bottom: 3rem;
+}
+
+.title .bar {
+  width: 4px;
+  height: 1.6rem;
+  border-radius: 2px;
+  background-color: var(--color-main);
+}
+
+.title .titleText {
+  font-size: 2.4rem;
+  font-weight: 500;
+}
+
+.title .icon {
+  color: var(--color-main);
+  margin-right: 0.5rem;
+}
+
+.showBtn {
+  font-size: 1.2rem;
+  color: var(--color-text-darkgray);
+  display: flex;
+  align-items: center;
+  padding: 0.3rem 0.5rem;
+}
+
+.categoriesWrap {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr); /* 기본적으로 5개 */
+  gap: 2rem;
+}
+
+.categoryContainer {
+  aspect-ratio: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 1rem;
+  transition: background-color 0.2s ease-in-out;
+  padding: 2rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.categoryContainer:hover {
+  background-color: var(--color-main-lighter);
+}
+
+.imgContainer {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.imgContainer img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  image-rendering: crisp-edges;
+  filter: grayscale(10%) blur(1px) opacity(15%);
+}
+
+.categoryText {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  text-align: center;
+  z-index: 10;
+}
+
+.superCategory {
+  font-size: 1.4rem;
+  color: var(--color-text-darkgray);
+  transition: color 0.2s ease-in-out;
+}
+
+.categoryContainer:hover .superCategory {
+  color: var(--color-main);
+}
+
+.middleCategory {
+  font-size: 1.4rem;
+  color: var(--color-text-gray);
+  transition: color 0.2s ease-in-out;
+}
+
+.categoryContainer:hover .middleCategory {
+  color: var(--color-main-medium);
+}
+
+.subCategory {
+  font-size: 2rem;
+  color: var(--color-text-black);
+  font-weight: 500;
+  transition: color 0.2s ease-in-out;
+}
+
+.categoryContainer:hover .subCategory {
+  color: var(--color-main-dark);
+}
+
+/* 태블릿 */
+@media screen and (max-width: 1024px) {
+  .categoriesWrap {
+    grid-template-columns: repeat(4, 1fr); /* 태블릿에서는 3개 */
+  }
+}
+
+/* 모바일 */
+@media screen and (max-width: 768px) {
+  .categoriesWrap {
+    grid-template-columns: repeat(3, 1fr); /* 모바일에서는 2개 */
+  }
+
+  .title .titleText {
+    font-size: 2rem;
+  }
+}
+
+.noCategories {
+  font-size: 1.6rem;
+  color: var(--color-text-gray);
+  text-align: center;
+  padding: 10rem 0;
+  border-top: 1px solid var(--color-border);
+  border-bottom: 1px solid var(--color-border);
+  background-color: var(--color-faintgray);
+  border-radius: 4px;
+}
+
+/* 기존 스타일은 유지하고 Button 관련 스타일 추가 */
+.categoryContainer.MuiButton-root {
+  /* MUI Button 기본 스타일 오버라이드 */
+  text-transform: none;
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  border-radius: 0;
+  /* 기존 categoryContainer 스타일 유지 */
+}
+
+.showBtn.MuiButton-root {
+  text-transform: none;
+  padding: 0;
+  color: inherit;
+  font-size: inherit;
+}

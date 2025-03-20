@@ -1,0 +1,152 @@
+.orderListContainer {
+  padding: 20px;
+  overflow-x: auto;
+}
+
+.orderListHeader {
+  margin-bottom: 20px;
+}
+
+.orderListHeader h2 {
+  color: #2c3e50;
+  margin-bottom: 8px;
+}
+
+.orderListHeader p {
+  color: #666;
+  margin: 0;
+}
+
+.filterContainer {
+  margin-bottom: 20px;
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.filterContainer label {
+  color: #2c3e50;
+  font-weight: 500;
+}
+
+.filterContainer select,
+.filterContainer input {
+  padding: 8px 12px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+.filterContainer input {
+  width: 150px;
+}
+
+.orderTable {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  font-size: 14px;
+  background-color: white;
+}
+
+.orderTable th {
+  background-color: #f8f9fa;
+  padding: 12px 8px;
+  text-align: left;
+  border-bottom: 2px solid #dee2e6;
+  white-space: nowrap;
+  cursor: pointer;
+}
+
+.orderTable th:hover {
+  background-color: #e9ecef;
+}
+
+.orderTable td {
+  padding: 12px 8px;
+  border-bottom: 1px solid #dee2e6;
+  vertical-align: middle;
+  max-width: 200px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* 날짜 컬럼 너비 조정 */
+.orderTable th:nth-child(2),
+.orderTable th:nth-child(9),
+.orderTable th:nth-child(10) {
+  min-width: 150px;
+}
+
+/* 주소 컬럼 너비 조정 */
+.orderTable th:nth-child(6) {
+  min-width: 200px;
+}
+
+/* 버튼 컬럼 너비 조정 */
+.orderTable th:last-child {
+  min-width: 100px;
+}
+
+.approveButton {
+  padding: 6px 12px;
+  background-color: #3498db;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.2s;
+}
+
+.approveButton:hover {
+  background-color: #2980b9;
+}
+
+.disabledButton {
+  padding: 6px 12px;
+  background-color: #95a5a6;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: not-allowed;
+  font-size: 14px;
+  opacity: 0.7;
+}
+
+.loadingSpinner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 200px;
+  font-size: 18px;
+  color: #666;
+}
+
+.errorMessage {
+  color: #e74c3c;
+  padding: 20px;
+  text-align: center;
+  font-size: 16px;
+}
+
+.noOrders {
+  text-align: center;
+  color: #666;
+  padding: 40px;
+}
+
+@media (max-width: 768px) {
+  .filterContainer {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 10px;
+  }
+
+  .filterContainer select,
+  .filterContainer input {
+    width: 100%;
+  }
+} 

@@ -1,0 +1,44 @@
+.visualBanner {
+  background-color: #e5eeea;
+  overflow: hidden;
+  position: relative;
+  cursor: pointer;
+}
+
+.text {
+  height: 100%;
+  padding: 40px 60px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  font-weight: 500;
+  color: var(--color-text-lightblack);
+  gap: 10px;
+  z-index: 10;
+}
+
+.text .title {
+  font-size: 3rem;
+  letter-spacing: -0.04em;
+}
+
+.text .subTitle {
+  font-size: 1.6rem;
+  letter-spacing: -0.04em;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.img {
+  position: absolute;
+  top: -110px;
+  right: 120px;
+  width: 300px;
+}
+
+@media screen and (max-width: 768px) {
+  .visualBanner .text {
+    margin-bottom: 10rem;
+  }
+}

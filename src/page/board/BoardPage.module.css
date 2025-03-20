@@ -1,0 +1,14 @@
+.wrap {
+  max-width: 1050px;
+  margin: 0 auto;
+  display: flex;
+  gap: 4rem;
+}
+
+.sidebar {
+  flex: 0 0 200px;
+}
+
+.content {
+  flex: 1;
+}

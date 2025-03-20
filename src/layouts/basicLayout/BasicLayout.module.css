@@ -1,0 +1,66 @@
+#wrap {
+  min-height: 100vh;
+  position: relative;
+}
+
+.main {
+  min-height: calc(100vh - 15.05rem); /* 헤더 높이만큼 뺌 */
+  position: relative;
+  user-select: none;
+}
+
+.main.scrolled {
+  min-height: 100vh;
+  padding-top: 15.05rem;
+}
+
+.aside {
+  position: absolute;
+  top: 70px;
+  right: 20px;
+  bottom: -93px;
+  z-index: 1;
+  margin-top: 93px;
+  user-select: none;
+}
+
+.footer {
+  user-select: none;
+  z-index: 2;
+  position: relative;
+}
+
+.topBtnWrap {
+  position: fixed;
+  bottom: 5rem;
+  right: 5rem;
+  z-index: 100;
+}
+
+.topBtnWrap:not(.visible) {
+  display: none;
+}
+
+.topBtnWrap.visible {
+  display: block;
+}
+
+.topBtn {
+  font-size: 2.4rem;
+  background-color: var(--color-white) !important;
+  border: 1px solid var(--color-faintgray) !important;
+  box-shadow: var(--light-shadow);
+  transition: all 0.1s;
+}
+
+.topBtn:hover {
+  color: var(--color-text-lightblack);
+  background-color: var(--color-white) !important;
+  box-shadow: var(--dark-shadow);
+}
+
+@media screen and (max-width: 1350px) {
+  .aside {
+    display: none;
+  }
+}

@@ -1,0 +1,46 @@
+.infoContainer {
+  padding: 3rem 2rem;
+}
+
+.infoHeader {
+  margin-bottom: 4rem;
+}
+
+.infoHeader h2 {
+  font-size: 2rem;
+  font-weight: 500;
+  margin-bottom: 2rem;
+}
+
+.infoHeader h3 {
+  font-size: 1.4rem;
+  font-weight: 500;
+  margin-bottom: 1rem;
+}
+
+.infoHeader p {
+  color: var(--color-text-darkgray);
+}
+
+.inputWrap {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.inputRow {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+  font-size: 1.4rem;
+}
+
+.inputLabel {
+  width: 10rem;
+  flex: none;
+}
+
+.buttonWrap {
+  margin-top: 2rem;
+  text-align: right;
+}

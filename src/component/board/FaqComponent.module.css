@@ -1,0 +1,76 @@
+.contentWrap {
+  padding-top: 7rem;
+}
+
+.titleWrap {
+  display: flex;
+  align-items: center;
+  gap: 1em;
+  margin-bottom: 3rem;
+}
+
+.boardTitle {
+  font-size: 2.4rem;
+  font-weight: 500;
+}
+
+.boardSubtitle {
+  font-size: 1.4rem;
+  color: var(--color-text-darkgray);
+}
+
+.boardTable {
+  width: 100%;
+  font-size: 1.4rem;
+}
+
+.title {
+  width: 70%;
+}
+
+.tableHeader th {
+  padding: 1.5em 0;
+  border: 1px solid var(--color-text-lightblack);
+  border-width: 1px 0 1px 0;
+  white-space: nowrap;
+}
+
+.tableContent {
+  cursor: pointer;
+}
+
+.tableContent:hover {
+  background-color: var(--color-faintgray);
+}
+
+.tableContent td {
+  border-bottom: 1px solid var(--color-lightergray);
+}
+
+.tableContent td:not(.contentTitle) {
+  padding: 1.3em 0;
+  text-align: center;
+}
+
+.tableContent td.contentTitle {
+  padding: 1.3em 1em;
+}
+
+.tableContent td.date {
+  color: var(--color-text-darkgray);
+}
+
+.answer {
+  display: none;
+}
+
+.answer.expanded {
+  display: table-row;
+}
+
+.answer td {
+  padding: 1.5em 2em;
+  background-color: var(--color-main-faint);
+  border-bottom: 1px solid var(--color-lightergray);
+  line-height: 1.5;
+}

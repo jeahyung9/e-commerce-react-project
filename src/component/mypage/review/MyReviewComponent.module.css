@@ -1,0 +1,201 @@
+.topWrap {
+  padding: 3rem 2rem 2rem;
+}
+
+.title {
+  font-size: 2rem;
+  font-weight: 500;
+  padding-bottom: 2rem;
+  border-bottom: 2px solid var(--color-text-lightblack);
+  margin-bottom: 1.5rem;
+}
+
+.menuBtnWrap {
+  font-size: 1.6rem;
+  font-weight: 500;
+  display: flex;
+}
+
+.menuBtn {
+  flex: 1;
+  border: 1px solid var(--color-lightergray);
+  padding: 1.3em 0;
+  transition: background-color 0.1s;
+}
+
+.menuBtn:first-of-type {
+  border-width: 1px 1px 1px 1px;
+}
+
+.menuBtn:last-of-type {
+  border-width: 1px 1px 1px 0;
+}
+
+.menuBtn:not(.active) {
+  color: var(--color-text-lightblack);
+  background-color: var(--color-faintgray);
+}
+
+.menuBtn:not(.active):hover {
+  background-color: var(--color-lightergray);
+}
+
+.menuBtn.active {
+  color: var(--color-main-dark);
+  border-bottom-color: transparent;
+}
+
+.description {
+  line-height: 1.5;
+  color: var(--color-text-darkgray);
+  transition: max-height 0.2s ease-out, margin-top 0.2s ease-out, opacity 0.1s linear;
+  overflow: hidden;
+}
+
+.description:not(.active) {
+  max-height: 0;
+  margin-top: 0;
+  opacity: 0;
+}
+
+.description.active {
+  max-height: 72px;
+  margin-top: 1.5rem;
+  opacity: 1;
+}
+
+.box {
+  height: 1rem;
+}
+
+.bottomWrap {
+  padding: 3rem 2rem;
+}
+
+.totalCnt {
+  font-size: 1.4rem;
+  font-weight: 500;
+}
+
+.num {
+  color: var(--color-main-dark);
+  font-size: 1.6rem;
+}
+
+/* 옵션 카드 시작 */
+.card:only-of-type {
+  margin-top: 1.5rem;
+}
+
+.card:not(:only-of-type) {
+  padding: 1.5rem 0;
+}
+
+.card:not(:first-of-type) {
+  border-top: 1px solid var(--color-lightergray);
+}
+
+.orderWrap {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.imgWrap {
+  width: 60px;
+  height: 60px;
+  overflow: hidden;
+  background-color: var(--color-lightergray);
+  color: var(--color-text-gray);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 0.5rem;
+  cursor: pointer;
+}
+
+.imgWrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.2s;
+}
+
+.imgWrap:hover img {
+  transform: scale(1.05);
+}
+
+.textWrap {
+  flex: 1;
+}
+
+.orderText {
+  line-height: 1.5;
+}
+
+.productName {
+  font-size: 1.4rem;
+  font-weight: 500;
+}
+
+.orderDate {
+  color: var(--color-text-darkgray);
+}
+
+.reviewBtnWrap {
+  display: flex;
+  justify-content: end;
+}
+
+.reviewBtn {
+  padding: 1rem 1.5rem;
+  border: 1px solid var(--color-lightgray);
+  border-radius: 0.5rem;
+}
+
+.reviewBtn:hover {
+  background-color: var(--color-faintgray);
+}
+
+.reviewItemWrap {
+  margin-top: 1rem;
+}
+
+.reviewTitle {
+  font-size: 1.6rem;
+  font-weight: 500;
+  margin-bottom: 1rem;
+}
+
+.rating {
+  margin-bottom: 1rem;
+}
+
+.reviewContent {
+  line-height: 1.5;
+}
+
+.btnWrap {
+  display: flex;
+  gap: 0.5rem;
+  justify-content: right;
+  align-items: center;
+}
+
+.btnWrap .verLine {
+  height: 1em;
+  width: 1px;
+  background-color: var(--color-lightergray);
+}
+
+.btnWrap button {
+  padding: 0.5rem 0.7rem;
+}
+/* 옵션 카드 끝 */
+
+.noReview {
+  color: var(--color-text-darkgray);
+  font-size: 1.8rem;
+  font-weight: 500;
+  text-align: center;
+  padding: 15rem 0;
+}

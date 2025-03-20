@@ -1,0 +1,42 @@
+.titleWrap {
+  padding: 3rem 0;
+  border-top: 1px solid var(--color-text-lightblack);
+  border-bottom: 1px solid var(--color-lightergray);
+}
+
+.title {
+  font-size: 2.8rem;
+  font-weight: 500;
+  margin-bottom: 1.5rem;
+}
+
+.date {
+  color: var(--color-text-darkgray);
+}
+
+.contentWrap {
+  font-size: 1.4rem;
+  line-height: 1.5;
+  padding: 3rem 0 5rem;
+  border-bottom: 1px solid var(--color-lightergray);
+  margin-bottom: 3rem;
+}
+
+.btnWrap {
+  display: flex;
+  justify-content: end;
+}
+
+.listBtn {
+  padding: 0.7em 1.2em;
+  color: var(--color-main-dark);
+  border: 1px solid var(--color-main-dark);
+  border-radius: 0.5rem;
+  background-color: var(--color-white);
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.listBtn:hover {
+  background-color: var(--color-main-lighter);
+}

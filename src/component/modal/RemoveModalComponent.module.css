@@ -1,0 +1,54 @@
+.removeModalWrap {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+  
+.removeModalContent {
+  background-color: var(--color-white);
+  padding: 16px;
+  border-radius: 16px;
+  position: relative;
+}
+
+.removeModalContent p {
+  padding: 15px 10px;
+  margin-bottom: 20px;
+}
+
+.removeModalContent .btnWrap {
+  display: flex;
+  gap: 5px;
+}
+  
+.removeModalContent .cancleBtn,
+.removeModalContent .submitBtn {
+  width: 120px;
+  height: 50px;
+  border-radius: 10px;
+  background-color: var(--color-lightergray);
+}
+
+.removeModalContent .cancleBtn:hover {
+  background-color: var(--color-lightgray);
+}
+
+.removeModalContent .submitBtn {
+  background-color: var(--color-text-black);
+  color: var(--color-white);
+}
+
+.removeModalWrap .bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
