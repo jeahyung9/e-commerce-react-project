@@ -28,12 +28,12 @@ const ProductList = () => {
   // 선택된 카테고리에 따라 상품 목록 가져오기
   const fetchProducts = async (categoryId) => {
     setLoading(true);
-    console.log(sort);
-    console.log(categoryId);
-    console.log(page);
+    // console.log(sort);
+    // console.log(categoryId);
+    // console.log(page);
     try {
       const data = await getList([page, 40, sort], {sort:sort, ctno:categoryId, keyword: keyword});
-      console.log(data);
+      //console.log(data);
       
       setProducts(data);
     } catch (error) {
@@ -59,15 +59,15 @@ const ProductList = () => {
   }, [selectedDepth1, selectedDepth2, selectedDepth3]);
 
   useEffect(() => {
-    console.log(products);
-    console.log(location.state);
+    // console.log(products);
+    // console.log(location.state);
     
   }, [products])
 
   // 카테고리 선택이 변경될 때마다 상품 목록 업데이트
   useEffect(() => {
     const categoryId = getSelectedCategoryId();
-    console.log(categoryId);
+    //console.log(categoryId);
     
     if(categoryId){
       fetchProducts(categoryId);
@@ -87,8 +87,8 @@ const ProductList = () => {
 
   // 헤더에서 전달받은 카테고리 정보 처리
   useEffect(() => {
-    console.log(location.state);
-    console.log(page + " : " + size + " : " + sort + " : " + menu);
+    // console.log(location.state);
+    // console.log(page + " : " + size + " : " + sort + " : " + menu);
     
     if (location.state?.categories) {
       const { categories } = location.state;

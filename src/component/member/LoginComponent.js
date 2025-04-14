@@ -42,7 +42,7 @@ const LoginComponent = () => {
   };
 
   const handleClickLogin = (evt) => {
-    console.log("로그인ㅇㅇㅇㅇ : ", loginParam);
+    //console.log("로그인ㅇㅇㅇㅇ : ", loginParam);
 
     dispatch(loginPostAsynch(loginParam))
       .then(data => {
@@ -111,7 +111,7 @@ const LoginComponent = () => {
   const link = getKakaoLoginLink();
 
   useEffect(() => {
-    console.log("현재 로그인 상태:", isLogin);  // 디버깅용
+    //console.log("현재 로그인 상태:", isLogin);  // 디버깅용
   }, [isLogin]);
 
   return (

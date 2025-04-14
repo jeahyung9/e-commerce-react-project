@@ -2,9 +2,8 @@ import axios from 'axios';
 import { API_SERVER_HOST } from './hostAPI';
 import { GoogleLogin } from '@react-oauth/google';
 
-const client_id = '';
-const client_secret = '';
-const redirect_uri = 'https://localhost:3000/member/google/suc';
+const client_id = '254904759902-p700k15ppeh230alb8gbf8b9dfj4mu53.apps.googleusercontent.com';
+const redirect_uri = process.env.REACT_APP_SNS_REDIRECT_IP + '/member/google/suc';
 const auth_code_path = 'https://accounts.google.com/o/oauth2/auth';
 const access_token_url = 'https://oauth2.googleapis.com/token'; 
 const host = `${API_SERVER_HOST}/api/member`;
@@ -29,11 +28,8 @@ export const getGoogleAccessToken = async (authCode) => {
     redirect_uri: redirect_uri,
     code: authCode,
   });
-  console.log("asd");
   
   try {
-    console.log("성곤");
-    
     const res = await axios.post(access_token_url, params, header);
     return res.data.access_token;
   } catch (error) {
@@ -44,7 +40,7 @@ export const getGoogleAccessToken = async (authCode) => {
 
 // 서버로 액세스 토큰을 보내는 함수
 export const getMemberWithAccessToken = async (accessToken) => {
-  console.log('서버로 전달되는 Google AccessToken: ', accessToken);
+  //console.log('서버로 전달되는 Google AccessToken: ', accessToken);
   try {
     const res = await axios.get(
       `${host}/google/suc/${accessToken}`

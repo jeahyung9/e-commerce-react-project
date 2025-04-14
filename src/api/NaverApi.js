@@ -3,7 +3,7 @@ import { API_SERVER_HOST } from './hostAPI';
 import qs from 'qs';
 
 const client_id = 'UwTwxxopvCbJN7NMCtn6';
-const redirect_uri = 'https://localhost:3000/member/naver/suc';
+const redirect_uri =  process.env.REACT_APP_SNS_REDIRECT_IP + '/member/naver/suc';
 const auth_code_path = 'https://nid.naver.com/oauth2.0/authorize';
 const access_token_url = 'https://nid.naver.com/oauth2.0/token';
 const client_secret = 'vFo6vebdiX';
@@ -80,8 +80,8 @@ export const getMemberWithAccessTokenNaver = async (accessToken) => {
     return;
   }
 
-  console.log("NaverAPI");
-  console.log('서버로 전달되는 accessToken : ', accessToken);
+  // console.log("NaverAPI");
+  // console.log('서버로 전달되는 accessToken : ', accessToken);
 
   try {
     const res = await axios.get(
@@ -92,7 +92,7 @@ export const getMemberWithAccessTokenNaver = async (accessToken) => {
         },
       }
     );
-    console.log("서버 응답 : " + JSON.stringify(res.data));
+    //console.log("서버 응답 : " + JSON.stringify(res.data));
     return res.data;
   } catch (error) {
     console.error("네이버 API 호출 실패 : ", error);

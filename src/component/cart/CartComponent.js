@@ -184,7 +184,7 @@ export const CartComponent = ({mno, setSelectCnt, setCartItemsCnt, setAllSelect,
                     <div className={styles.pName}>{data.p_name}</div>
                     <div className={styles.pImgSelect}>
                         <div className={styles.pImg}>
-                            <img src={`${API_SERVER_HOST}/${data.pi_name}`} alt="상품 이미지"></img>
+                            <img src={`https://pickdeal-image.s3.ap-northeast-2.amazonaws.com/product/${data.pi_name}`} alt="상품 이미지"></img>
                         </div>
                         <div className={styles.pSelect}>
                             <div className={styles.pPrice}>

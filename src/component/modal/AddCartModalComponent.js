@@ -6,7 +6,7 @@ import { API_SERVER_HOST } from '../../api/hostAPI';
 
 export const AddCartModalComponent = ({mno, modal, setModal, setCart}) => {
     
-    const [ product, setProduct ] = useState([]);
+    const [ product, setProduct ] = useState({productImage:[],});
     const [ option, setOption ] = useState([]);
     const [ cnt, setCnt ] = useState([]);
     const [ totalPrice, setTotalPrice ] = useState(0);
@@ -102,7 +102,7 @@ export const AddCartModalComponent = ({mno, modal, setModal, setCart}) => {
                 <div className={styles.productWrap}>
                     {product.productImage?.length > 0 ? (
                         <div className={styles.pImg}>
-                            <img src={`${API_SERVER_HOST}/${product.productImage?.[0]?.pi_name}`} alt="상품 이미지"></img>
+                            <img src={`https://pickdeal-image.s3.ap-northeast-2.amazonaws.com/product/${product.productImage[0]?.pi_name}`} alt="상품 이미지"></img>
                         </div>
                     ) : (
                         <div className={styles.noImg}>이미지 없음</div>

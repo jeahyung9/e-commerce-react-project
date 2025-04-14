@@ -21,7 +21,7 @@ const ProductDetail = () => {
   const navigate = useNavigate();
   const { pno } = useParams();
   const { isLogin, loginState } = useCustomLogin();
-  const [product, setProduct] = useState({});
+  const [product, setProduct] = useState({productImage:[],});
   const [selectedOptions, setSelectedOptions] = useState([]);
   const [ wno, setWno ] = useState();
   const [ checkWish, setCheckWish ] = useState(false);
@@ -212,14 +212,18 @@ const ProductDetail = () => {
     <>
       <div className={styles.wrap}>
         <div className={styles.productIntro}>
-          <div className={styles.productImgWrap}>
-            <img
-              src={`${API_SERVER_HOST}/${product.productImage?.length > 0 ? product.productImage[0]?.pi_name : ""}`}
-              alt="이미지"
-              className={styles.productImg}
-              onError={handleImageError}
-            />
-          </div>
+          {product.productImage.length === 0 ? (
+              <div className={styles.noImg}>이미지 없음</div>
+            ) : (
+            <div className={styles.productImgWrap}>
+              <img
+                src={`https://pickdeal-image.s3.ap-northeast-2.amazonaws.com/product/${product.productImage[0]?.pi_name}`}
+                alt="이미지"
+                className={styles.productImg}
+                onError={handleImageError}
+                />
+            </div>
+            )}
           <div className={styles.productInfo}>
             <div className={styles.productInfoTop}>
               <h2 className={styles.pNameTopWrap}>

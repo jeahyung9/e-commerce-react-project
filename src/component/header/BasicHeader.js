@@ -62,7 +62,7 @@ const BasicHeader = () => {
     const email = loginState.email || loginState.m_email;
 
     if(isLogin){
-      console.log(loginState);
+      //console.log(loginState);
       
       if(email){
         getMember(email).then(data => {
@@ -76,7 +76,7 @@ const BasicHeader = () => {
   }, [isLogin])
 
   useEffect(() => {
-    console.log(member);
+    //console.log(member);
     if(member){
       getCartItems(member?.mno).then(data => {
           setCartCnt(data.length);
@@ -417,7 +417,7 @@ const BasicHeader = () => {
                 <Button
                   className={styles.menuBtn}
                   color="primary"
-                  href="/product/list"
+                  onClick={() => handleMenuClick("p_salePer")}
                 >
                   이벤트
                 </Button>

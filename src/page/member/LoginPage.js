@@ -8,7 +8,7 @@ const LoginPage = () => {
   const navigate = useNavigate();
 
   useEffect(() => {
-    console.log(isLogin);
+    //console.log(isLogin);
     
     if(isLogin){
       alert("로그인 중");

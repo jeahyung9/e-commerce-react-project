@@ -90,7 +90,7 @@ export const deleteOne = async (pno) => {
       order: order,
       keyword: keyword,
     };
-  console.log(params);
+  //console.log(params);
     const res = await axios.get(`${prefix}/list`, { params });
   
     return res.data;

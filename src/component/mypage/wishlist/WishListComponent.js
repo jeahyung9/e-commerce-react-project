@@ -112,7 +112,7 @@ const WishListComponent = () => {
                         product[index]?.productImage.length === 0 ?
                         (<div className={styles.noImg}>이미지 없음</div>)
                         :
-                        (<img src={`${API_SERVER_HOST}/${product[index]?.productImage[0]?.pi_name}`} alt="상품 이미지" onError={handleImageError}></img>)
+                        (<img src={`https://pickdeal-image.s3.ap-northeast-2.amazonaws.com/product/${product[index]?.productImage[0]?.pi_name}`} alt="상품 이미지" onError={handleImageError}></img>)
                     }
                 </div>
                 <div className={styles.textBtnWrap}>

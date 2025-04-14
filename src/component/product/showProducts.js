@@ -14,7 +14,7 @@ const ShowProducts = ({ products, loading, mno, menu }) => {
   const isCate = location.state?.isCate;
 
   useEffect(() => {
-    console.log(products);
+    //console.log(products);
     if(location.state?.menu){
       setSortBy(location.state ? location.state.sortBy : 'p_salesVol');
     }

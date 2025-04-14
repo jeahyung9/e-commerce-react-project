@@ -95,7 +95,7 @@ const ProductItem = ({ product, loading }) => {
               <div className={styles.noImg}>이미지 없음</div>
             ) : (
               <div className={styles.imgBox}>
-                <img className={styles.img} src={`${API_SERVER_HOST}/${product.productImage[0]?.pi_name}`} alt={product.productImage[0]?.pi_name} onError={handleImageError} />
+                <img className={styles.img} src={`https://pickdeal-image.s3.ap-northeast-2.amazonaws.com/product/${product.productImage[0]?.pi_name}`} alt={product.productImage[0]?.pi_name} onError={handleImageError} />
               </div>
             )}
             <Button

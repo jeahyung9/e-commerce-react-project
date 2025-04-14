@@ -114,7 +114,7 @@ const CategoriesSection = ({mno}) => {
               }}
             >
               <div className={styles.imgContainer}>
-                <img src={`${API_SERVER_HOST}/baby_1.jpg`} alt="Category" />
+                <img src={`https://pickdeal-image.s3.ap-northeast-2.amazonaws.com/product/baby_1.jpg`} alt="Category" />
               </div>
               <div className={styles.categoryText}>
                 <span className={styles.superCategory}>

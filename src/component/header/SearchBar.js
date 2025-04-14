@@ -18,14 +18,14 @@ const SearchBar = ({ useHeaderStyles = true , isMenu, setIsMenu}) => {
 
   useEffect(() => {
     if(isHome){
-      console.log(location);
+      //console.log(location);
       searchInputRef.current.value = '';
       navigate("/");
     }
   },[isHome])
 
   useEffect(() => {
-    console.log(isMenu);
+    //console.log(isMenu);
     if(isMenu){
       searchInputRef.current.value = '';
       setIsMenu(false);
@@ -33,7 +33,7 @@ const SearchBar = ({ useHeaderStyles = true , isMenu, setIsMenu}) => {
   }, [isMenu]);
 
   useEffect(() => {
-    console.log(isCate);
+    //console.log(isCate);
     if(isCate){
       searchInputRef.current.value = '';
     }
@@ -56,7 +56,7 @@ const SearchBar = ({ useHeaderStyles = true , isMenu, setIsMenu}) => {
   };
 
   const handleSearchList = () => {
-    console.log(keyword);
+    //console.log(keyword);
     navigate("/product/list", {state: {keyword: keyword, searching: true}});
   }
 

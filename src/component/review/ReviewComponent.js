@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import styles from './ReviewComponent.module.css';
 import { changeReview, getReview, getReviewRate } from '../../api/reviewAPI';
-import { useLocation, useParams } from 'react-router-dom';
+import { useLocation } from 'react-router-dom';
 import PageComponent from "../paging/PageComponent";
 import { useCustomMove } from '../../hooks/useCustomMove';
 import { format } from 'date-fns';
