@@ -1,0 +1,53 @@
+#wrap {
+  min-height: 100vh;
+  position: relative;
+}
+
+header {
+  background-color: var(--color-white);
+  box-shadow: var(--drop-light-shadow);
+  z-index: 1000;
+  position: relative;
+  user-select: none;
+  width: 100%;
+}
+
+header.scrolled {
+  height: 5.6rem;
+  position: fixed;
+  left: 0;
+  top: 0;
+}
+
+main {
+  min-height: calc(100vh - 15.05rem); /* 헤더 높이만큼 뺌 */
+  position: relative;
+}
+
+main.scrolled {
+  min-height: 100vh;
+  padding-top: 15.05rem;
+}
+
+aside {
+  position: absolute;
+  top: 70px;
+  right: 20px;
+  bottom: -93px;
+  z-index: 1;
+  margin-top: 93px;
+  user-select: none;
+}
+
+footer {
+  padding-top: 40px;
+  user-select: none;
+  z-index: 2;
+  position: relative;
+}
+
+@media screen and (max-width: 1350px) {
+  aside {
+    display: none;
+  }
+}

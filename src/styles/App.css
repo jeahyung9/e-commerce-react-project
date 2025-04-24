@@ -1,0 +1,40 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap');
+
+:root {
+  /* color */
+  --color-main: #8447ff;
+  --color-main-light: #d0b9ff;
+  --color-main-faint: #f2ecff;
+  --color-text-black: #333333;
+  --color-text-lightblack: #515151;
+  --color-text-darkgray: #999999;
+  --color-text-gray: #b5b5b5;
+  --color-lightgray: #dddddd;
+  --color-faintgray: #f7f7f7;
+  --color-white: #ffffff;
+  --color-red: #eb5858;
+  --color-blue: #6262f1;
+
+  /* font */
+  --basic-font: 1.2rem;
+
+  /* box-shadow */
+  --drop-dark-shadow-left: -1px 4px 5px rgba(0, 0, 0, 0.3);
+  --drop-dark-shadow-right: 2px 4px 5px rgba(0, 0, 0, 0.3);
+  --drop-light-shadow: 0px 3px 4px 0px rgba(0, 0, 0, 0.07);
+  --rise-light-shadow: 0px -3px -4px 0px rgba(0, 0, 0, 0.07);
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Noto Sans KR',
+    'malgun gothic', sans-serif;
+  font-size: var(--basic-font);
+  color: var(--color-text-black);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  min-height: 100vh;
+}
