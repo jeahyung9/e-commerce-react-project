@@ -12,6 +12,7 @@ import { ReactComponent as Kakaopay } from '../../assets/icon/kakaopay.svg';
 import toss from '../../assets/icon/toss.png';
 import { deleteCartItem, getCartItems } from '../../api/cartAPI';
 import { useAppContext } from '../../context/Context';
+import { API_SERVER_HOST } from '../../api/hostAPI';
 
 const PaymentForm = () => {
   const { isLogin, loginState } = useCustomLogin();
@@ -243,7 +244,7 @@ const PaymentForm = () => {
 
             const ono = orderResponse.ono;
 
-            const paymentResponse = await fetch('http://localhost:8080/api/payments', {
+            const paymentResponse = await fetch(API_SERVER_HOST + '/api/payments', {
               method: 'POST',
               headers: {
                 'Content-Type': 'application/json',
@@ -271,7 +272,7 @@ const PaymentForm = () => {
               }
 
               const verifyResponse = await fetch(
-                `http://localhost:8080/api/payments/verify/${response.imp_uid}/${pmno}`,
+                API_SERVER_HOST + `/api/payments/verify/${response.imp_uid}/${pmno}`,
                 { method: 'POST' }
               );
 

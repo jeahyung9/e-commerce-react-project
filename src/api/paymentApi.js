@@ -1,4 +1,6 @@
-const API_BASE_URL = 'http://localhost:8080';
+import { API_SERVER_HOST } from "./hostAPI";
+
+const API_BASE_URL = API_SERVER_HOST;
 
 /**
  * 주문 상세 정보 가져오기

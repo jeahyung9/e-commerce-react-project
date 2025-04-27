@@ -31,8 +31,9 @@ const CategoriesSection = ({mno}) => {
   }, [categoryCount]);
 
   const handleCategoryClick = (category) => {
-    
+    console.log(category);
     let state = {
+      page: 1,
       selectedDepth: 3,
       categories: {
         depth1: category.superCate?.superCate,

@@ -65,7 +65,6 @@ const ProductsSection = ({ title, sortOption, size, mno }) => {
 
   const handleMenuClick = (sort) => {
     const state = {
-      mno : member.mno,
       menu: true,
       sortBy: sort,
     };

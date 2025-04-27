@@ -5,7 +5,7 @@ import styles from './WishListComponent.module.css';
 import MyPageContainer from "../MyPageContainer";
 import { RemoveModalComponent } from "../../modal/RemoveModalComponent";
 import { AddCartModalComponent } from "../../modal/AddCartModalComponent";
-import { addCartItem } from "../../../api/cartAPI";
+import { addCartItem, getCartItems } from "../../../api/cartAPI";
 import { useLocation } from "react-router-dom";
 import useCustomLogin from "../../../hooks/useCustomLogin";
 import { addComma } from "../../../hooks/useCustomPrice";
@@ -14,6 +14,7 @@ import { ReactComponent as Heart } from "../../../assets/icon/heart.svg";
 import { getCookie } from "../../../util/cookieUtil";
 import { API_SERVER_HOST } from "../../../api/hostAPI";
 import { getOne } from "../../../api/productAPI";
+import { useAppContext } from "../../../context/Context";
 
 const WishListComponent = () => {
     const location = useLocation();
@@ -27,6 +28,7 @@ const WishListComponent = () => {
     const [ isRemove, setIsRemove ] = useState(false);
     const [ wno, setWno ] = useState(0);
     const [ product, setProduct ] = useState([]);
+    const { setCartCnt } = useAppContext();
 
     useEffect(() => {
         if(isLogin){
@@ -43,7 +45,6 @@ const WishListComponent = () => {
                 setWishList(data);
             })
         }
-        
     }, [mno])
 
     useEffect(() => {
@@ -74,7 +75,11 @@ const WishListComponent = () => {
     useEffect(() => {
         //console.log(cart);
         if(cart.length !== 0){
-            cart.map(item => addCartItem(item));
+            Promise.all(cart.map(item => addCartItem(item))).then(() => 
+                getCartItems(mno).then(data => {
+                    setCartCnt(data.length);
+                })
+            );
         }
     }, [cart]);
 

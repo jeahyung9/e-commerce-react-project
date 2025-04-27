@@ -32,10 +32,6 @@ const BasicHeader = () => {
   const [ alertShown, setAlertShown ] = useState(false);
   const [ isMenu, setIsMenu ] = useState(false);
   const { cartCnt, setCartCnt } = useAppContext();
-  
-  //let isCnt = location.state?.isCnt || false;
-
-  //const [cartCnt, setCartCnt] = useState(0);
 
   useEffect(() => {
     const expires = localStorage.getItem("expires");
@@ -83,16 +79,6 @@ const BasicHeader = () => {
       });
     }
   }, [member])
-
-  // useEffect(() => {
-  //   if(isCnt){
-  //     if(member){
-  //       getCartItems(member.mno).then(data => {
-  //         setCartCnt(data.length);
-  //       });
-  //     }
-  //   }
-  // }, [isCnt])
 
   useEffect(() => {
     const handleScroll = () => {
@@ -174,6 +160,7 @@ const BasicHeader = () => {
 
   const handleMenuClick = (sort) => {
     const state = {
+      page: 1,
       mno : member?.mno,
       menu: true,
       sortBy: sort,

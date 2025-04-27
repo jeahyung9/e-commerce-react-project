@@ -59,8 +59,8 @@ const ProductList = () => {
   }, [selectedDepth1, selectedDepth2, selectedDepth3]);
 
   useEffect(() => {
-    // console.log(products);
-    // console.log(location.state);
+    //console.log(products);
+    //console.log(location.state);
     
   }, [products])
 
@@ -69,17 +69,11 @@ const ProductList = () => {
     const categoryId = getSelectedCategoryId();
     //console.log(categoryId);
     
-    if(categoryId){
-      fetchProducts(categoryId);
-    }else if(check){
-      fetchProducts(categoryId);
-    }else if(menu){
-      fetchProducts(categoryId);
-    }else if(keyword){
-      fetchProducts(categoryId);
-    }else if(page){
-      fetchProducts(categoryId);
-    }else if(sort){
+    if (!categoryId && !check && !menu && !keyword && !page && !sort) {
+      return;
+    }
+
+    if (page && sort && categoryId || keyword || menu || check) {
       fetchProducts(categoryId);
     }
     
@@ -87,7 +81,7 @@ const ProductList = () => {
 
   // 헤더에서 전달받은 카테고리 정보 처리
   useEffect(() => {
-    // console.log(location.state);
+    //console.log(location.state);
     // console.log(page + " : " + size + " : " + sort + " : " + menu);
     
     if (location.state?.categories) {
@@ -102,6 +96,10 @@ const ProductList = () => {
       if (categories.depth3) {
         setSelectedDepth3(categories.depth3.ctno.toString());
       }
+    }else if(!location.state?.categories && !location.state?.isCate){
+      setSelectedDepth1('all');
+      setSelectedDepth2('all');
+      setSelectedDepth3('all');
     }
   }, [location]);
 
